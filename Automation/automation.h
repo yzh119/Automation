@@ -185,14 +185,14 @@ public:
 						ff = edge[fnl].find(fnl) != edge[fnl].end(),
 						fi = edge[fnl].find(init) != edge[fnl].end();
 					String cir;
-					if (ii) cir += bracket(edge[init][init], '*');
+					if (ii) cir += bracket(edge[init][init], '*') + "^{*}";
 					cir += bracket(edge[init][fnl], '+');
-					if (ff) cir += bracket(edge[fnl][fnl], '*');
+					if (ff) cir += bracket(edge[fnl][fnl], '*') + "^{*}";
 					cir += bracket(edge[fnl][init], '+');
 					ret = "(" + cir + ")" + "^{*}";
-					if (ii) ret += bracket(edge[init][init], '*');
+					if (ii) ret += bracket(edge[init][init], '*') + "^{*}";
 					ret += bracket(edge[init][fnl], '+');
-					if (ff) ret += bracket(edge[fnl][fnl], '*');
+					if (ff) ret += bracket(edge[fnl][fnl], '*') + "^{*}";
 				}
 			}
 		}
